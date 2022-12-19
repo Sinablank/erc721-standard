@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="bg-container-contact100" style="background-image: url(images/bg-01.jpg); overflow: scroll;">
+		<div class="contact100-header flex-sb-m">
+			<a href="#" class="contact100-header-logo">
+				<img src="images/icons/logo.png" alt="LOGO">
+			</a>
+        </div>
+
+        <div class="alert alert-info Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                  <b>NFT Specifications</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                  <b>NFTName</b>  : <span id="NFTName"></span>
+                </div>
+                <div class="col-md-6">
+                  <b>NFTSymbol</b> : <span id="NFTSymbol"></span>
+                </div>   
+            </div>
+        </div>
+
+        <div class="alert alert-success Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                    <b>CurrentAccount Specifications</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <b>Address</b>  : <span id="Address"></span>
+                </div>
+                <div class="col-md-4">
+                    <b>balanceOf</b> : <span id="balanceOf_CurrentAccount"></span>
+                </div>              
+            </div>
+            <hr>
+            <div class="row">
+               <input type="file" id="fileimg" onchange="previewFile()"><br>
+               <img src="" alt="" id="imgnft">
+            </div>
+            <br>
+
+            <div class="row">
+                <button type="button" class="btn btn-primary btnmint" id="mint">Mint NFT</button>
+            </div>
+
+
+      </div>
+
+
+      <div class="alert alert-warning Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>Owner Of NFT</b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <input class="form-control" type="number" id="tokenidowner" placeholder="Token ID">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btn-block" id="Owner">Owner</button>
+            </div>              
+        </div>
+        
+      </div>
+
+      <div class="alert alert-warning Alertmargin" role="alert">
+        <div class="row" style="text-align: center;font-size: 20px;"> 
+            <b>َApprove NFT</b> 
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <input class="form-control" type="text" id="AdressToApprove" placeholder="Address To">
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" type="number" id="َTokenIDApprove" placeholder="Token ID">
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-block" id="َApprove">َApprove</button>
+            </div>              
+        </div>
+    </div>
+
+        <div class="alert alert-warning Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>Get Approve NFT</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <input class="form-control" type="number" id="tokenidGetApprove" placeholder="Token ID">
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" id="GetApprove">Get Approve</button>
+                </div>              
+            </div>       
+          </div>
+
+
+          <div class="alert alert-warning Alertmargin" role="alert">
+          <div class="row" style="text-align: center;font-size: 20px;"> 
+              <b>set Approval For All NFT</b> 
+          </div>
+          <hr>
+          <div class="row">
+              <div class="col-md-5">
+                  <input class="form-control" type="text" id="AdressApprovalForAll" placeholder="Address To">
+              </div>
+              <div class="col-md-5">
+                  <input class="form-control" type="text" id="boolApprovalForAll" placeholder="true Or false">
+              </div>
+              <div class="col-md-2">
+                  <button type="button" class="btn btn-primary btn-block" id="setApprovalForAll">Approval For All</button>
+              </div>              
+          </div>
+          
+        </div>
+
+        <div class="alert alert-warning Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>isApprovedForAll NFT</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-5">
+                    <input class="form-control" type="text" id="AddressfromToApprove" placeholder="Address from">
+                </div>
+                <div class="col-md-5">
+                    <input class="form-control" type="text" id="AddressToToApprove" placeholder="Address To">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary btn-block" id="isApproved">isApproved</button>
+                </div>              
+            </div>
+            
+          </div>
+
+          <div class="alert alert-warning Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>TransferFrom NFT</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="form-control" type="text" id="AdressFromTransfeFrom" placeholder="Address From">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" type="text" id="AdressToTransfeFrom" placeholder="Address To">
+                </div>
+            </div>
+            <div class="row">   
+                <div class="col-md-6">
+                    <input class="form-control" type="number" id="IDAdressToTransfeFrom" placeholder="TokenID">
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-block" id="TransfeFrom">TransfeFrom</button>
+                </div>              
+            </div>
+        </div>
+
+        <div class="alert alert-warning Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>Burn Of NFT</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <input class="form-control" type="number" id="tokenidburn" placeholder="Token ID">
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" id="Burn">Burn</button>
+                </div>              
+            </div>
+            
+          </div>
+
+
+          <div class="alert alert-warning Alertmargin" role="alert">
+            <div class="row" style="text-align: center;font-size: 20px;"> 
+                <b>Show NFT</b> 
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <input class="form-control" type="number" id="tokenidShow" placeholder="Token ID">
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block" id="ShowNFT">Show NFT</button>
+                </div>              
+            </div>
+            <div class="row">
+                <div id="showimgnft">
+                   
+                </div>
+            </div>
+            
+          </div>
+
+    </div>
+
+
+
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/web3new.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script src="js/ipfs-mini.js"></script>
+    <!-- <script src="js/ipfs-mini.min.js"></script> -->
+    <script src="js/app.js"></script>
+</html>
